@@ -11,9 +11,18 @@ li {
   color: #333;
 }
 .logo:hover {
-  color: #333;
+  color: #C0392B;
   text-decoration: none;
 }
 .small-placeholder {
   font-size: 11pt;
+}
+.btn-hover {
+  color: #fafafa;
+  background: #C0392B;
+}
+.btn-hover:hover, .btn-hover:focus {
+  color: #fafafa;
+  background: #E74C3C;
+  outline: none;
 }

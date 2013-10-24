@@ -1,9 +1,9 @@
-<div class="col-md-12">
+<div class="col-md-7">
   <%= form_for(@piece) do |f| %>
     <%= f.label :title, "Title" %><br>
-    <%= f.text_field :title, :placeholder => "#{@piece.title}" %><br>
+    <%= f.text_field :title, :placeholder => "#{@piece.title}", style: 'width: 100%' %><br>
     <%= f.label :body, "Body" %><br>
-    <%= f.text_area :body, size: "60x12", :value => "#{@piece.body}" %><br>
-    <%= f.submit "Update" %>
+    <%= f.text_area :body, :value => "#{@piece.body}", style: 'width: 100%; height: 350px;' %><br>
+    <%= f.submit "Update", class: 'btn btn-secondary btn-hover', style: 'margin-top: 25px; float: right;' %>
   <% end %>
 </div>

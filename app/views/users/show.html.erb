@@ -1,5 +1,6 @@
+<div class="col-md-12">
 <% if @pieces.any? %>
-  <h3>All pieces:</h3>
+  <h2>All pieces:</h2>
   <ul>
     <% @pieces.each do |piece| %>
     <li><%= link_to("#{piece.title}", "/pieces/#{piece.id}") %></li>
@@ -8,3 +9,4 @@
 <% else %>
   No pieces here.
 <% end %>
+</div>

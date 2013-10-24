@@ -1,9 +1,9 @@
-<div class="col-md-8">
+<div class="col-md-7">
   <%= form_for(@piece) do |f| %>
     <%= f.label :orig_title, "Title" %><br>
-    <%= f.text_field :orig_title %><br>
+    <%= f.text_field :orig_title, style: 'width: 100%' %><br>
     <%= f.label :orig_body, "Body" %><br>
     <%= f.text_area :orig_body, style: 'width: 100%; height: 350px; resize: none;', :placeholder => "Paste what you wanna plagiarize here." %><br>
-    <%= f.submit "Plagiarize", class: 'btn btn-secondary', style: 'margin-top: 25px; float: right;' %>
+    <%= f.submit "Playgiarize", class: 'btn btn-secondary btn-hover', style: 'margin-top: 25px; float: right;' %>
   <% end %>
 </div>

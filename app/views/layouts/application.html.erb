@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Playgiarize</title>
+  <%= favicon_link_tag 'favicon.ico' %>
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= stylesheet_link_tag "http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css", :media => 'all' %>
   <%= javascript_include_tag "application" %>
@@ -26,7 +27,7 @@
       </div>
     </div>
     <div class="row">
-      <%= yield %>
+        <%= yield %>
     </div>
   </div>
 </body>
