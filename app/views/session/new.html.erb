@@ -1,9 +1,7 @@
 <h2>Log in</h2>
 
 <%= form_tag('/login') do %>
-  <%= label_tag :username %>
-  <%= text_field_tag :username %><br>
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
-  <%= submit_tag "Log in" %>
+  <%= text_field_tag :username, nil, :placeholder => 'Username', :class => 'small-placeholder' %><br>
+  <%= password_field_tag :password, nil, :placeholder => 'Password', :class => 'small-placeholder' %><br>
+  <%= submit_tag "Log in", class: 'btn btn-secondary', style: 'margin-top: 25px;' %>
 <% end %>

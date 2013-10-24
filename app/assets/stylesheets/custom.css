@@ -13,4 +13,7 @@ li {
 .logo:hover {
   color: #333;
   text-decoration: none;
-};
+}
+.small-placeholder {
+  font-size: 11pt;
+}
