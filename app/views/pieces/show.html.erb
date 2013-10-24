@@ -1,0 +1,21 @@
+<div class="col-md-6">
+  <h3>Original</h3>
+  <h2><%= @piece.orig_title.titleize %></h2>
+  <p><%= @piece.orig_body %></p>
+</div>
+
+<div class ="col-md-6">
+  <h3>Playgiarized</h3>
+  <h2><%= @piece.title.titleize %></h2>
+  <p><%= @piece.body %></p>
+
+<div align="right">
+  <% if @piece.user_id == nil %>
+    <%= link_to("save", "/error") %>
+  <% elsif @piece.user_id == session[:user_id]%>
+    <%= link_to("edit", "/pieces/#{@piece.id}/edit") %>
+    <%= link_to("delete", "/pieces/#{@piece.id}", :method => :delete) %>
+  <% end %>
+</div>
+</div>
+</div>

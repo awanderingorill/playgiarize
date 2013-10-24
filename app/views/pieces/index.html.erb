@@ -1,0 +1,7 @@
+<ul>
+  <% @pieces.each do |piece| %>
+    <% if piece.user_id %>
+    <li><%= link_to("#{piece.title}", "/pieces/#{piece.id}") %></li>
+    <% end %>
+  <% end %>
+</ul>

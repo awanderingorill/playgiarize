@@ -1,0 +1,16 @@
+.header-container {
+  margin-bottom: 25px;
+}
+ul {
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+.logo {
+  color: #333;
+}
+.logo:hover {
+  color: #333;
+  text-decoration: none;
+};

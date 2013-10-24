@@ -1,0 +1,22 @@
+PROBLEMS
+
+- needs to not call .plagiarize if no initial title is inputted
+
+- need to add "exceptions" array for words not to be plagiarized (pronouns, conjunctions, contractions)
+
+- need field for orig_author
+
+- layout/css
+
+- login / sign up displays, even if a user is currently logged in
+  => when a user is signed in, i want the nav to say "see all my pieces"
+  => when there is no user signed in, i want the nav to say "see all existing pieces"
+
+- add "save" button that requires you to log in before saving your piece
+
+- HATES QUESTION MARKS
+
+
+EXTRA FEATURES
+- add tagging to pieces
+- share pieces on twitter/facebook

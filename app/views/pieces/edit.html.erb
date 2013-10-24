@@ -1,0 +1,9 @@
+<div class="col-md-12">
+  <%= form_for(@piece) do |f| %>
+    <%= f.label :title, "Title" %><br>
+    <%= f.text_field :title, :placeholder => "#{@piece.title}" %><br>
+    <%= f.label :body, "Body" %><br>
+    <%= f.text_area :body, size: "60x12", :value => "#{@piece.body}" %><br>
+    <%= f.submit "Update" %>
+  <% end %>
+</div>

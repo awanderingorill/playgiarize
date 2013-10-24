@@ -1,0 +1,10 @@
+<% if @pieces.any? %>
+  <h3>All pieces:</h3>
+  <ul>
+    <% @pieces.each do |piece| %>
+    <li><%= link_to("#{piece.title}", "/pieces/#{piece.id}") %></li>
+    <% end %>
+  </ul>
+<% else %>
+  No pieces here.
+<% end %>
