@@ -18,7 +18,7 @@
         <nav align="right" class="login-links">
           <% if session[:user_id] %>
           <% @user = User.find(session[:user_id]) %>
-          <h3>logged in as <%= @user.username.capitalize %> | <%= link_to('Log out', '/logout') %></h3>
+          <h3>logged in as <%= link_to("#{@user.username}", "/users/#{@user.id}") %> | <%= link_to('Log out', '/logout') %></h3>
           <% else %>
           <h3><%= link_to('Log in', '/login') %> | <%= link_to('Sign up', '/users/new') %></h3>
           <% end %>

@@ -13,8 +13,7 @@
   <% if @piece.user_id == nil %>
     <%= link_to("save", "/error") %>
   <% elsif @piece.user_id == session[:user_id]%>
-    <%= link_to("edit", "/pieces/#{@piece.id}/edit") %>
-    <%= link_to("delete", "/pieces/#{@piece.id}", :method => :delete) %>
+    <%= link_to("edit", "/pieces/#{@piece.id}/edit") %> | <%= link_to("delete", "/pieces/#{@piece.id}", :method => :delete) %>
   <% end %>
 </div>
 </div>

@@ -124,12 +124,19 @@ legend {
   border: 0;
   padding: 0;
 }
-button,
-input,
-select,
-textarea {
-  font-family: 'Montserrat', sans-serif;
+
+textarea
+  {
+  font-family: 'Buenard', serif;
   font-size: 100%;
+  margin: 0;
+}
+
+button,
+select,
+input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
   margin: 0;
 }
 button,
@@ -197,10 +204,16 @@ body {
   color: #333333;
   background-color: #ffffff;
 }
+
+textarea {
+  font-family: 'Buenard', serif;
+  font-size: inherit;
+  line-height: inherit;
+}
+
 input,
 button,
-select,
-textarea {
+select, {
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   font-size: inherit;
@@ -1828,6 +1841,7 @@ textarea.input-lg {
   font-weight: normal;
   line-height: 1.428571429;
   text-align: center;
+  text-transform: uppercase;
   vertical-align: middle;
   cursor: pointer;
   border: 1px solid transparent;
