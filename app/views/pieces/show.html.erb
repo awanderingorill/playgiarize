@@ -1,13 +1,13 @@
 <div class="col-md-6">
   <h3>Original</h3>
   <h2><%= @piece.orig_title.titleize %></h2>
-  <p><%= @piece.orig_body %></p>
+  <p><%= simple_format(@piece.orig_body) %></p>
 </div>
 
 <div class ="col-md-6">
   <h3>Playgiarized</h3>
   <h2><%= @piece.title.titleize %></h2>
-  <p><%= @piece.body %></p>
+  <p><%= simple_format(@piece.body) %></p>
 
 <div align="right">
   <% if @piece.user_id == nil %>
