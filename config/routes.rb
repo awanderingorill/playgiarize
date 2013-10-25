@@ -6,6 +6,7 @@ Plagiarize::Application.routes.draw do
   post '/login' => 'session#create'
   get '/logout' => 'session#destroy'
   get '/error' => 'session#prompt'
+  get '/about' => 'session#about'
 
   resources :users
   resources :pieces

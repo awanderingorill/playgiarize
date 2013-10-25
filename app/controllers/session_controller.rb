@@ -29,4 +29,7 @@ class SessionController < ApplicationController
   def prompt
   end
 
+  def about
+  end
+
 end
