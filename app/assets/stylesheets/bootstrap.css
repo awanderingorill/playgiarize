@@ -132,6 +132,7 @@ textarea
   font-size: 17pt;
   margin: 0;
   padding: 7px;
+  outline: none;
 }
 
 button,
@@ -141,6 +142,7 @@ input {
   color: #333;
   font-size: 30px;
   margin: 0;
+  outline: none;
 }
 button,
 input {

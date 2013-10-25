@@ -1,9 +1,13 @@
-<div class="col-md-7">
+<div class="col-md-6">
+    <h3>Original</h3>
+  <h2><%= @piece.orig_title.titleize %></h2>
+  <p><%= simple_format(@piece.orig_body) %></p>
+</div>
+<div class="col-md-6">
   <%= form_for(@piece) do |f| %>
-    <%= f.label :title, "Title" %><br>
-    <%= f.text_field :title, :placeholder => "#{@piece.title}", style: 'width: 100%' %><br>
-    <%= f.label :body, "Body" %><br>
-    <%= f.text_area :body, :value => "#{@piece.body}", style: 'width: 100%; height: 350px; resize: none;' %><br>
+    <h3>Playgiarized</h3>
+    <%= f.text_field :title, :value => "#{@piece.title}", style: 'width: 100%; margin-bottom: 10px;' %><br>
+    <%= f.text_area :body, :value => "#{@piece.body}", style: 'width: 100%; height: 350px; resize: none; padding-top: 1px;' %><br>
     <%= f.submit "Update", class: 'btn btn-secondary btn-hover', style: 'margin-top: 25px; float: right;' %>
   <% end %>
 </div>
