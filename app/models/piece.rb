@@ -9,37 +9,33 @@ class Piece < ActiveRecord::Base
 
   def plagiarize
 
-      orig_title_downcase = orig_title.downcase
-      words = orig_title_downcase.split(/ /)
-      plagiarized_words = []
-      words.each do |w|
-        if w != "[]"
-          synonyms = Wordnik.word.get_related(w, :type => 'synonym')
-          if synonyms.any? && !STOP_WORDS.include?(w) && synonyms.class == Array
-            synonym = synonyms.first["words"].sample
-            plagiarized_words << synonym
-          else plagiarized_words << w
-          end
-        end
-        plagiarized_title = plagiarized_words.join(" ")
-        self.title = plagiarized_title
+    orig_title_downcase = orig_title.downcase
+    words = orig_title_downcase.split(/ /)
+    plagiarized_words = []
+    words.each do |w|
+      synonyms = Wordnik.word.get_related(w, :type => 'synonym')
+      if synonyms.any? && !STOP_WORDS.include?(w) && synonyms.class == Array
+        synonym = synonyms.first["words"].sample
+        plagiarized_words << synonym
+      else plagiarized_words << w
       end
-
-      orig_body_downcase = orig_body
-      words = orig_body_downcase.split(/ /)
-      plagiarized_words = []
-      words.each do |w|
-        if w != "[]"
-          synonyms = Wordnik.word.get_related(w, :type => 'synonym')
-          if synonyms.any? && !STOP_WORDS.include?(w) && synonyms.class == Array
-            synonym = synonyms.first["words"].sample
-            plagiarized_words << synonym
-          else plagiarized_words << w
-          end
-        end
-        plagiarized_body = plagiarized_words.join(" ")
-        self.body = plagiarized_body
-      end
+      plagiarized_title = plagiarized_words.join(" ")
+      self.title = plagiarized_title
     end
 
+    orig_body_downcase = orig_body
+    words = orig_body_downcase.split(/ /)
+    plagiarized_words = []
+    words.each do |w|
+        synonyms = Wordnik.word.get_related(w, :type => 'synonym')
+        if synonyms.any? && !STOP_WORDS.include?(w) && synonyms.class == Array
+          synonym = synonyms.first["words"].sample
+          plagiarized_words << synonym
+        else plagiarized_words << w
+      end
+      plagiarized_body = plagiarized_words.join(" ")
+      self.body = plagiarized_body
+    end
   end
+
+end
