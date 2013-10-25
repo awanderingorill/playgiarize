@@ -9,14 +9,13 @@ class Piece < ActiveRecord::Base
 
   def plagiarize
 # as long as there is an input in the title field, do this
-      orig_title_downcase = orig_title
-      words = orig_title_downcase.split(/ /)
+      words = orig_title.split(/ /)
       plagiarized_words = []
       words.each do |w|
 # if 'w' does not equal any of the words in the exception list, do this
 # otherwise, just copy the existing word into the new array
-        synonyms = Wordnik.word.get_related(w.downcase, :type => 'synonym')
-        if synonyms.any? && !STOP_WORDS.include?(w)
+        synonyms = Wordnik.word.get_related(w, :type => 'synonym')
+        if synonyms.any? && !STOP_WORDS.include?(w) && synonyms.class == Array
           synonym = synonyms.first["words"].sample
           plagiarized_words << synonym
         else plagiarized_words << w

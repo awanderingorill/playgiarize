@@ -128,7 +128,8 @@ legend {
 textarea
   {
   font-family: 'Buenard', serif;
-  font-size: 100%;
+  color: #333;
+  font-size: 17pt;
   margin: 0;
   padding: 7px;
 }
@@ -137,6 +138,7 @@ button,
 select,
 input {
   font-family: 'Montserrat', sans-serif;
+  color: #333;
   font-size: 30px;
   margin: 0;
 }
@@ -200,7 +202,7 @@ html {
 }
 body {
   font-family: 'Buenard', serif;
-  font-size: 16pt;
+  font-size: 17pt;
   line-height: 1.428571429;
   color: #333333;
   background-color: #ffffff;
@@ -416,7 +418,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: 'Montserrat', serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   line-height: 1.1;
 }
@@ -665,11 +667,7 @@ pre code {
   max-height: 340px;
   overflow-y: scroll;
 }
-.wrapper {
-  width: 100%;
-  max-width: 1180px;
-  margin: 45px auto;
-}
+
 .container {
   margin-right: auto;
   margin-left: auto;

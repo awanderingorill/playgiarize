@@ -27,3 +27,9 @@ li {
   background: #E74C3C;
   outline: none;
 }
+
+.wrapper {
+  width: 100%;
+  max-width: 1180px;
+  margin: 45px auto;
+}

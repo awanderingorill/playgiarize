@@ -3,7 +3,7 @@
     <%= f.label :title, "Title" %><br>
     <%= f.text_field :title, :placeholder => "#{@piece.title}", style: 'width: 100%' %><br>
     <%= f.label :body, "Body" %><br>
-    <%= f.text_area :body, :value => "#{@piece.body}", style: 'width: 100%; height: 350px;' %><br>
+    <%= f.text_area :body, :value => "#{@piece.body}", style: 'width: 100%; height: 350px; resize: none;' %><br>
     <%= f.submit "Update", class: 'btn btn-secondary btn-hover', style: 'margin-top: 25px; float: right;' %>
   <% end %>
 </div>
