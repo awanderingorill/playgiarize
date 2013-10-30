@@ -14,6 +14,9 @@ class PiecesController < ApplicationController
 
   def create
     piece = Piece.new(params[:piece])
+    if piece.orig_title == ""
+      piece.orig_title = "untitled"
+    end
     piece.plagiarize
     if session[:user_id]
       piece.user_id = session[:user_id]
